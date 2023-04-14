@@ -28,7 +28,7 @@ public class ReplayHeader
 	public string MatchType { get; set; }
 	public string PlayerName { get; set; }
     
-	public List<Goal>? Goals { get; set; }
-	public List<HighLight>? HighLights { get; set; }
-	public List<PlayerStat>? PlayerStats { get; set; }
+	public List<Goal> Goals { get; set; }
+	public List<HighLight> HighLights { get; set; }
+	public List<PlayerStat> PlayerStats { get; set; }
 }

@@ -24,7 +24,7 @@ public static class ReplayReader
 			if (fileInfo.Extension != ReplayExtension)
 				continue;
 
-			if (TryReadReplayFile(fileInfo.FullName, out Replay? replay) && replay != null)
+			if (TryReadReplayFile(fileInfo.FullName, out Replay replay) && replay != null)
 				replays.Add(replay);
 		}
 		
@@ -38,7 +38,7 @@ public static class ReplayReader
 	/// <param name="filePath">The path of the replay file</param>
 	/// <param name="replay">Replay object that contains the data for the replay</param>
 	/// <returns>False if file does not exist or the file extension is wrong. True otherwise</returns>
-	public static bool TryReadReplayFile(string filePath, out Replay? replay)
+	public static bool TryReadReplayFile(string filePath, out Replay replay)
 	{
 		replay = null;
 		
@@ -123,7 +123,7 @@ public static class ReplayReader
 		if (string.IsNullOrWhiteSpace(propertyName) || string.IsNullOrWhiteSpace(propertyType))
 			return false;
 
-		PropertyInfo? propertyInfo = obj.GetType().GetProperty(propertyName);
+		PropertyInfo propertyInfo = obj.GetType().GetProperty(propertyName);
 
 		if (propertyInfo == null)
 		{

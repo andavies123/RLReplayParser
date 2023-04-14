@@ -5,7 +5,7 @@ namespace RLReplayParser.Properties;
 
 public static class ArrayProperty
 {
-	public static IList? Read(BinaryReader binaryReader, string arrayName)
+	public static IList Read(BinaryReader binaryReader, string arrayName)
 	{
 		binaryReader.ReadInt64(); // Bytes
 		int arrayLength = binaryReader.ReadInt32();
