@@ -5,7 +5,7 @@ using RLReplayParser.Properties;
 
 namespace RLReplayParser;
 
-public static class ReplayReader
+public static class ReplayParser
 {
 	private const string ReplayExtension = ".replay";
 

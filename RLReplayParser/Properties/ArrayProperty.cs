@@ -35,7 +35,7 @@ public static class ArrayProperty
 	{
 		T obj = new();
 		
-		while(ReplayReader.ReadNextProperty(binaryReader, obj)) { }
+		while(ReplayParser.ReadNextProperty(binaryReader, obj)) { }
 
 		return obj;
 	}
