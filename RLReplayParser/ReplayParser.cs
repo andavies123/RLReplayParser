@@ -47,6 +47,11 @@ public static class ReplayParser
 		Console.WriteLine($"Reading {Path.GetFileName(filePath)}");
 		
 		using Stream stream = File.Open(filePath, FileMode.Open);
+
+		// Should not continue if the stream is empty
+		if (stream.Length == 0)
+			return false;
+		
 		using BinaryReader binaryReader = new(stream, Encoding.UTF8, false);
 		
 		replay = ReadReplay(binaryReader);
