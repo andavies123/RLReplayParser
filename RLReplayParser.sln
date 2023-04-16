@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLReplayParser", "RLReplayParser\RLReplayParser.csproj", "{D4BD3BC4-9815-41A5-BDD9-054C9ADD4FEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLReplayParser.Test", "RLReplayParser.Test\RLReplayParser.Test.csproj", "{05F969FC-333B-4449-94D5-1FD6BD8DAB4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D4BD3BC4-9815-41A5-BDD9-054C9ADD4FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BD3BC4-9815-41A5-BDD9-054C9ADD4FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BD3BC4-9815-41A5-BDD9-054C9ADD4FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F969FC-333B-4449-94D5-1FD6BD8DAB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F969FC-333B-4449-94D5-1FD6BD8DAB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F969FC-333B-4449-94D5-1FD6BD8DAB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F969FC-333B-4449-94D5-1FD6BD8DAB4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
