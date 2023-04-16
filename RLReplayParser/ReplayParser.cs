@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Text;
+using RLReplayParser.Global;
 using RLReplayParser.Models;
 using RLReplayParser.Properties;
 
@@ -7,8 +8,6 @@ namespace RLReplayParser;
 
 public static class ReplayParser
 {
-	private const string ReplayExtension = ".replay";
-
 	private const string None = "None";
 
 	public static bool TryReadReplayFolder(string folderPath, out List<Replay> replays)
@@ -21,7 +20,7 @@ public static class ReplayParser
 
 		foreach (FileInfo fileInfo in directoryInfo.GetFiles())
 		{
-			if (fileInfo.Extension != ReplayExtension)
+			if (fileInfo.Extension != Constants.ReplayExtension)
 				continue;
 
 			if (TryReadReplayFile(fileInfo.FullName, out Replay replay) && replay != null)
@@ -42,7 +41,7 @@ public static class ReplayParser
 	{
 		replay = null;
 		
-		if (!File.Exists(filePath) || !Path.GetExtension(filePath).Equals(ReplayExtension, StringComparison.OrdinalIgnoreCase))
+		if (!File.Exists(filePath) || !Path.GetExtension(filePath).Equals(Constants.ReplayExtension, StringComparison.OrdinalIgnoreCase))
 			return false;
 
 		Console.WriteLine($"Reading {Path.GetFileName(filePath)}");
